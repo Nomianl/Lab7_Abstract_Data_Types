@@ -1,0 +1,12 @@
+# Compiled executables (Windows)
+*.exe
+
+# Compiled executables (Mac/Linux)
+book_hold_log_example
+study_session_log
+
+# Intermediate object files
+*.o
+
+# Editor configuration
+.vscode/
