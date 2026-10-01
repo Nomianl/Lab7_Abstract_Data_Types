@@ -7,6 +7,7 @@
  */
 
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 
 /*
@@ -45,7 +46,7 @@ private:
 
 public:
     // TODO (Part D): Write a constructor that creates an empty log.
-    sTUDYSessionLog()
+    StudySessionLog()
     {
         count = 0; // A new log begins with no stored session durations.
     }
@@ -107,10 +108,27 @@ int main()
     // ===== Resolve these TODOs later (Part E) =====
 
     // TODO (Part E): Create a StudySessionLog object and print whether it starts empty.
+    StudySessionLog log;
+    cout << "Is the log empty? " << (log.isEmpty() ? "Yes" : "No") << endl;
     // TODO (Part E): Add four dummy session durations and attempt to add a fifth.
+    log.addSession(65);
+    log.addSession(45);
+    log.addSession(30);
+    log.addSession(90);
+    bool fifthAdded = log.addSession(120);
     // TODO (Part E): Print the number of stored sessions and whether the fifth session was accepted.
+    // cout << "Number of stored sessions: " << log.size() << endl; -------
+    cout << "Was the fifth session accepted? " << (fifthAdded ? "Yes" : "No") << endl;
     // TODO (Part E): Print the total minutes and the longest stored session.
+    // cout << "Total minutes: " << log.totalMinutes() << endl; ----------
+    // cout << "Longest session: " << log.longestSession() << endl; ----------
     // TODO (Part E): Print descriptive English labels for all results.
+    // cout << "Descriptive labels for all results:" << endl; **
+    // cout << "Is the log empty? " << (log.isEmpty() ? "Yes" : "No") << endl; --------
+    cout << "Number of stored sessions: " << log.size() << endl;
+    //cout << "Was the fifth session accepted? " << (fifthAdded ? "Yes" : "No") << endl; ------------
+    cout << "Total minutes: " << log.totalMinutes() << endl;
+    cout << "Longest session: " << log.longestSession() << endl;
 
     return 0;
 }
